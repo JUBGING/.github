@@ -1,12 +1,6 @@
 # Jubging
 
-<p align="center">
-  <br>
-  <img src="./">
-  <br>
-</p>
-![화면 캡처 2023-01-17 155945](https://user-images.githubusercontent.com/57697721/212831337-e979732f-6080-4411-8f02-64c4e99cd143.png)
-
+<img src="https://user-images.githubusercontent.com/57697721/212832750-776c8823-8ac1-4fe2-8b9c-dbf6ff88de38.png" width="300" height="350">
 
 
 ## 프로젝트 소개
@@ -72,7 +66,7 @@
  
 
 ### 하드웨어 (줍줍이)
-- 뚜껑
+- 뚜껑<br>
 ![image](https://user-images.githubusercontent.com/57697721/212826865-8863f9f0-b0f1-46ff-a786-0e702598b98d.png)
 - 블루투스 모듈 (HC-06)<br>
 ![image](https://user-images.githubusercontent.com/57697721/212826972-177706d8-d595-498f-a373-aee8dcab4266.png)
