@@ -15,17 +15,17 @@
 <p align="center">
 
 <p align="justify">
-As you walk along streets, you can often see garbage along the sidewalk. Garbage thrwon away on the street is the main culprit of pollution. Garbage is blown by the wind and moved by rain to rivers or coasts which is harmful for marine lives. Garbage thrwon away on the street causes many other problems too.
+As you walk along streets, you can often see garbage along the sidewalk. Garbage thrown away on the street is the main culprit of pollution. Garbage is blown by the wind and moved by rain to rivers or coasts which is harmful for marine lives. Garbage causes many other problems too.
 
 To alleviate this problem, we thought that it is important to reduce garbage on streets. So we developed this application named "<strong>Jubging</strong>"
 
 <p align="justify">
- "Jubging" is Korean word for "Plogging" which is combination of Swedish word plocka up(picking up) and jogga(jog). Plogging is a fitness trend started in Sweden where you just have to pick up garbage while you jog. To activate this fitness trend, we made a special garbage can that measures the weight of the garbage picked up by users. Our Service converts the weigth of garbage into points. Users can use the points in our market to buy various products.
+ "Jubging" is Korean word for "Plogging" which is combination of Swedish word plocka up(picking up) and jogga(jog). Plogging is a fitness trend started in Sweden where you just have to pick up garbage while you jog. To promote this fitness trend, we made a special garbage can that measures the weight of the garbage picked up by users. Our Service converts the weigth of garbage into points. Users can use the points in our market to buy various products.
 <p align="center">
 
 <br><br>
 
-## 사용자 프로세스
+## User Process
 
 - 사용자는 저희가 제작한 쓰레기통(줍줍이)의 위치를 어플리케이션을 통해 확인합니다. 
 - 사용자는 줍깅을 시작하기 전 줍줍이로 이동하여 줍깅에 필요한 봉투와 집게를 제공 받습니다. 
@@ -36,13 +36,21 @@ To alleviate this problem, we thought that it is important to reduce garbage on 
 - 사진 촬영이 끝나고 다음 단계로 넘어가게 되면 블루투스로 핸드폰과 줍줍이가 연결되어 줍줍이의 뚜껑이 열리게 됩니다. 사용자는 이제 쓰레기를 버리고 핸드폰으로 무게를 확인 할 수 있습니다. 
 - 사용자가 확인 버튼을 누르면 줍줍이의 뚜껑이 닫히게 되고 줍깅 활동이 완료되며 사용자는 배출한 쓰레기의 무게를 기반으로 포인트를 얻게 됩니다. 
 
+- User checks the location of the garbage can through our application.
+- User goes to the garbage can to receive tongs and plastic bags needed for plogging.
+- User plogs
+- When plogging is done, user returns to the garbage can near by and return the tong.
+- User has to take a picture of the garbage to verify whether the user put actual garbage. (To prevent users to gain points in a dishonest way) We use yolo to estimate the approximate weight of the garbage in the image.
+- If the estimated weight is much more lighter than the measured weight, the image is saved in the server for managers to check.
+- After taking a picture, user has to connect with the garbage can through bluetooth. Then the garbage can opens itself. User can throw the garbage and check the weight with their smartphone.
+- When user press the confirm button, the garbagecan closes itself and user gets points based on the weight of the garbage. 
 <p align="center">
 
 </p>
 
 <br>
 
-## 기술 스택
+## Tech Stack
 
 | SpringBoot | AndroidStudio | YOLOv7 |  Arduino  | MariaDB | 
 | :--------: | :-----------: | :----: | :-------: | :-----: |
@@ -52,15 +60,19 @@ To alleviate this problem, we thought that it is important to reduce garbage on 
 <br><br>
 
 
-## 구현 기능
+## Features
 
-### 지도
+### Map
 - 구글 맵과 연동하여 현재 줍줍이의 위치를 지도에 표시해줍니다.
-
-### 데이터 측정 
+  
+- Marks location of the garbage cans using google map
+  
+### plogging data
 - 사용자는 줍깅을 시작하여 자신이 줍깅을 하며 뛴 거리, 속도, 소비 칼로리 등을 알 수있습니다.
 - 사용자가 쓰레기를 줍줍이에 버리고 나면 줍줍이가 무게를 측정하여 사용자에게 배출한 무게를 알려줍니다.
 
+- User can check the distance, velocity, calories etc while plogging.
+- User can chgeck the weight of the garbage
 ### 쓰레기 판별 AI
 - 사용자가 마일리지를 얻기 위하여 쓰레기가 아닌 무거운 물체 (돌, 물이 찬 물병 등)을 배출하는 행위를 방지하기 위해 인증 사진을 사용하여 AI가 사용자가 배출한 물체가 쓰레기가 맞는지 판별합니다.
 - 쓰레기가 아닌 물체로 판별될 경우 해당 사진을 서버의 특정 디렉토리에 저장하여 관리자가 따로 관리 할 수 있도록 구현했습니다.
