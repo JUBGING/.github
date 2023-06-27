@@ -73,51 +73,58 @@ To alleviate this problem, we thought that it is important to reduce garbage on 
 
 - User can check the distance, velocity, calories etc while plogging.
 - User can chgeck the weight of the garbage
-### 쓰레기 판별 AI
+  
+### Garbage verifying AI
 - 사용자가 마일리지를 얻기 위하여 쓰레기가 아닌 무거운 물체 (돌, 물이 찬 물병 등)을 배출하는 행위를 방지하기 위해 인증 사진을 사용하여 AI가 사용자가 배출한 물체가 쓰레기가 맞는지 판별합니다.
 - 쓰레기가 아닌 물체로 판별될 경우 해당 사진을 서버의 특정 디렉토리에 저장하여 관리자가 따로 관리 할 수 있도록 구현했습니다.
 
-### 인스타 공유
-- 사용자가 촬영한 사진과 본인이 기록한 줍깅 데이터를 인스타에 공유 할 수 있습니다.
-- 사용자가 촬영한 사진위에 배출한 쓰레기 무게, 총 이동 거리, 걸음 수 등의 데이터가 포함됩니다. 
+- To prevent users throwing away heavy objects that are not garbage (rocks, bottle full of water), AI checks whether the garbage thrown by the user is an actual garbage.
+- If it is not verified as an actual garbage, it is saved in the server so that managers can check.
 
-### 마일리지
+### Sharing
+- 사용자가 촬영한 사진과 본인이 기록한 줍깅 데이터를 인스타에 공유 할 수 있습니다.
+- 사용자가 촬영한 사진위에 배출한 쓰레기 무게, 총 이동 거리, 걸음 수 등의 데이터가 포함됩니다.
+
+- User can share the plogging data through instagram
+
+### Points
 - 배출된 무게 만큼 마일리지로 환산하여 사용자에게 제공됩니다.
 - 환산된 마일리지는 앱내의 마일리지 샵에서 여러가지 물품을 구매 할 수 있습니다.
- 
 
-### 하드웨어 (줍줍이)
+- User gets points based on the weight of the garbage.
+- User can buy products with the points
+
+### Hardware (줍줍이)
 - 뚜껑<br>
 ![image](https://user-images.githubusercontent.com/57697721/212826865-8863f9f0-b0f1-46ff-a786-0e702598b98d.png)
-- 블루투스 모듈 (HC-06)<br>
+- Bluetooth Module (HC-06)<br>
 ![image](https://user-images.githubusercontent.com/57697721/212826972-177706d8-d595-498f-a373-aee8dcab4266.png)
-- 무게 센서 (Load cell, HX711)<br>
+- Weight sensor (Load cell, HX711)<br>
 ![image](https://user-images.githubusercontent.com/57697721/212827034-3ee0ecdf-68d0-4d68-b20b-5eb59a715e9c.png)
-- 모델 사진<br>
+- Model <br>
 ![image](https://user-images.githubusercontent.com/57697721/212827086-61566bb6-f136-43ee-b416-5e05924cd401.png)
 ![image](https://user-images.githubusercontent.com/57697721/212827104-077ac370-571c-4893-8620-b01bdc0eb00a.png)
 ![image](https://user-images.githubusercontent.com/57697721/212827115-026ed719-4e4d-44a5-8231-3db057170dbf.png)
 ![image](https://user-images.githubusercontent.com/57697721/212827132-2d7a87a1-2736-4679-bb85-463bbe54624b.png)
 
-## 프로젝트 실행 방법
-### 어플리케이션
-- 준비사항 : 깃, 안드로이드 스튜디오
+## How to run
+### Application
+- prerequisite : git, Android Studio
 1. git clone https://github.com/JUBGING/Jubging_Android.git
-2. 클론 받은 폴더를 android studio로 엽니다.
-3. 어플리케이션 실행을 위해서는 Googl Map Api Key를 manifest 파일에 저장해야 합니다.
-4. 핸드폰 또는 AVD 연결 하여 어플리케이션을 실행합니다.
+2. open folder with android studio
+3. Put Googl Map Api Key in the manifest file.
+4. Connect AVD or your smartphone.
 5. 어플리케이션을 통해 줍깅 활동을 시작하여면 근처에 줍줍이와 블루투스로 연결이 되어야 합니다.
 
-### 하드웨어
-- 준비사항 : 깃, 아두이노, Arduino uno r3, hc-06, hx711, loadcell sensor, servo motor, 1.5v 건전지 8개, 점퍼케이블, 아두이노 보드 연결 케이블, 9v 건전지
+### Hardware
+- Prerequisite : Git, Arduino, Arduino uno r3, hc-06, hx711, loadcell sensor, servo motor, 1.5v battery x8, jumper cable, arduino cable, 9v battery
 1. git clone https://github.com/JUBGING/jubging_arduino.git
-2. Arduino를 통해서 클론 받은 파일을 엽니다. 
-3. 아두이노 보드에 케이블을 연결하여 코드를 빌드 합니다.
-4. 아두이노 코드를 실행 시킵니다.
-5. 아두이노를 실행하기 위해서는 다음의 설계도를 바탕으로 하드웨어를 구성해야 합니다.
-6. 서보모터는 6,7번 블루투스 TXD, RXD는 4번, 5번 로드셀의 DOUT, SCK 는 2번,3번에 연결 합니다.
+2. open file with arduino. 
+3. connect the arduino board and build the code.
+4. Execute the code.
+5. connect servo motor to 6,7, bluetooth module's txd, rxd to 4,5, load cell's dout, sck to 2,3
 
-## 시연 영상
+## Demo Video
 https://youtu.be/oS_OXPgWMsM
 
 <br>
