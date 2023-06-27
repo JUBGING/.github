@@ -3,7 +3,7 @@
 <img src="https://user-images.githubusercontent.com/57697721/212832750-776c8823-8ac1-4fe2-8b9c-dbf6ff88de38.png" width="300" height="350">
 
 
-## 프로젝트 소개
+## Project Introduction
 
 <p align="justify">
 한강을 걷다 보면 강변에 쓰레기가 쌓여 있는 모습을 흔히 볼 수 있습니다. 길거리에 버려진 쓰레기는 환경오염의 주범입니다. 쓰레기들은 바람에 날리고 빗물에 씻겨 강이나 해안가로 이동하여 해양 생물체들에게 호흡을 못하게 하고 해양 야생 동물들을 얽혀 죽게 하고 있습니다.
@@ -12,6 +12,15 @@
 
 <p align="justify">
 <strong>줍깅</strong>이란, 줍다와 조깅을 결합한 단어로 거리에 버려진 쓰레기를 최대한 많이 주우면서 목적지까지 가벼운 조깅으로 가는 환경보호 운동입니다. 저희는 줍깅 활동을 활성화 시키기 위해 자신이 줍깅 활동으로 배출한 쓰레기의 무게를 측정하는 쓰레기통을 제작하여 배출한 무게 만큼 상점에서 사용 할 수 있는 포인트로 바꿔주는 서비스를 개발하였습니다.
+<p align="center">
+
+<p align="justify">
+As you walk along streets, you can often see garbage along the sidewalk. Garbage thrwon away on the street is the main culprit of pollution. Garbage is blown by the wind and moved by rain to rivers or coasts which is harmful for marine lives. Garbage thrwon away on the street causes many other problems too.
+
+To alleviate this problem, we thought that it is important to reduce garbage on streets. So we developed this application named "<strong>Jubging</strong>"
+
+<p align="justify">
+ "Jubging" is Korean word for "Plogging" which is combination of Swedish word plocka up(picking up) and jogga(jog). Plogging is a fitness trend started in Sweden where you just have to pick up garbage while you jog. To activate this fitness trend, we made a special garbage can that measures the weight of the garbage picked up by users. Our Service converts the weigth of garbage into points. Users can use the points in our market to buy various products.
 <p align="center">
 
 <br><br>
